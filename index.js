@@ -75,8 +75,7 @@ class ReactNativeOmise {
                 if (response.ok && response.status === 200) {
                     resolve(response.json());
                 } else {
-                    console.log("response not ok", response);
-                    reject(response.json());
+                    resolve(response.json())
                 }
             }).catch((error) => resolve(error));
         });
